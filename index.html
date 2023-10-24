@@ -31,7 +31,7 @@
                     <li>
                     <!--Add buttons to initiate auth sequence and sign out-->
                     <button id="authorize_button" onclick="handleAuthClick()">Sign In</button>
-                    <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+                    
                     </li>
                 </ul>
             </div>
@@ -39,68 +39,34 @@
     </div>
     <ul class="side-nav fixed floating transparent z-depth-0">
         
-        <button onclick="createFolder()"><i class="material-icons">add</i><span>  New</span></button>
+    <button onclick="uploadBasic()"><i class="material-icons">add</i><span>  New</span></button>
         <li><a href="#"><i class="material-icons">access_time</i>Recent</element></a></li>
         <li><a href="#"><i class="material-icons">people</i>Shared with me</a></li>
         
         <li><a href="#"><i class="material-icons">star</i>Starred</a></li>
         <li><a href="#"><i class="material-icons">delete</i>Trash</a></li>
         <li><a href="#"><i class="material-icons">cloud</i>Backup</a></li>
+        <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
     </ul>
     <div class="main">
-        <div class="container-fluid">
-            <h5>Recents</h5>
-            <br>
-            <div class="card-panel card-image">
-                <a href="#">G-drive clone sy</a><i class="material-icons left">picture_as_pdf</i>
-                <div class="dropdown">
-                    <span class="material-icons right">more_vert</span>
-                    <div class="dropdown-options">
-                        <div class="card-panel card-image">
-                            <span class="material-icons left">content_copy</span>
-                            <a href=""> Copy Link</a>
-                            <br>
-                            <br>
-                            <span class="material-icons left">qr_code_scanner</span>
-                            <a href="https://me-qr.com/qr-code-generator/link"> Create QR Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-panel card-image">
-                <a href="gdrive main 2.pdf">G-Drive main file</a><i class="material-icons left">picture_as_pdf</i>
-                <div class="dropdown">
-                    <span class="material-icons right">more_vert</span>
-                    <div class="dropdown-options">
-                        <div class="card-panel card-image">
-                            <span class="material-icons left">content_copy</span>
-                            <a href="#">Copy Link</a>
-                            <br>
-                            <br>
-                            <span class="material-icons left">qr_code_scanner</span>
-                            <a href="https://me-qr.com/qr-code-generator/link">Create QR Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <table id="listFiles">
-                <tbody>
-                    <template x-for="file in files">
-                        <tr>
-                            <td><span main="file.name"></span><i class="right"></i></td>
+        <div id="listFiles">
+            <div>
+                <!--<template x-for="file in files">-->
+                    <tr>
+                        <br>
+                        <div id="listFiles">
+                            <td><span main="file.name"></span></td>
                             <td><span main="file.mimeType"></span></td>
                             <td><span main="file.size"></span></td>
-                            <td><a href="file.webViewLink" target="_new">view</a>
-                            <td><a href="file.webContentLink">download</a></td>
-                        </tr>
-                    </template>
-                </tbody>
+                            <td><span main="file.webViewLink"></span></td>
+                        </div>
+                    </tr>    
             </table>
-        </div> 
-        <!-- on top, render a list of files in a table -->
+        </div>
+                            
         
     </div>
-</body>
+
     <script src="script.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -110,4 +76,20 @@
 
     <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
     <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+
+    <!-- CONFIG -->
+    <script src="./js/config.js"></script>
+    <!-- Extra Libs -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
 </html>
