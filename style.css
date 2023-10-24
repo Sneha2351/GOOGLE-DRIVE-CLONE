@@ -23,9 +23,11 @@ body {
 
 .main {
     position: absolute;
-    width: calc(100% - 250px);
-    top: 125px;
+    height: 30rem;
+    width: 65rem;
+    top: 100px;
     margin-left: 250px;
+    background-color: #fff;
 }
 
 .subheader {
@@ -66,7 +68,7 @@ nav ul a img {
 }
 
 .nav-wrapper ul a:hover {
-    background-color: transparent;
+    background-color: #fff;
 }
 
 .nav-wrapper .title {
@@ -198,34 +200,6 @@ input[type="search"]::placeholder {
     border-radius: 2px;
 }
 
-/*folders*/
-.folder {
-    width: 185px;
-    display: inline-block;
-    margin: 15px 20px 15px 0;
-    font-weight: 500;
-}
-
-.folder i {
-    color: rgba(0, 0, 0, 0.54);
-    margin-top: -3px;
-}
-.dropdown {
-    display: inline-block;
-    position: relative;
-    padding-left: 650px;
-}
-.dropdown-options {
-    display: none;
-    position: absolute;
-    overflow: auto;
-}
-
-.dropdown:hover .dropdown-options {
-    display: block;
-    width: 170px;
-}
-.dropdown .card-panel{
-    padding: 8px 8px;
-    font-weight: 150px;
+tr{
+    line-height: initial;
 }
