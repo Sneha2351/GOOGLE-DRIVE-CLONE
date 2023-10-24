@@ -1,13 +1,13 @@
 {
   "name": "g-drive",
   "version": "1.0.0",
-  "description": "",
+  "description": "Google Drive Clone",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sneha Sharma",
   "license": "ISC",
   "dependencies": {
     "googleapis": "^118.0.0"
