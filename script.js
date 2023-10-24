@@ -1,8 +1,5 @@
 const CLIENT_ID = '720233636227-4cmoofng05km3ch4gesohsf705lcnkpm.apps.googleusercontent.com';
-/*const CLIENT_SECRET = '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';
-const REDIRECT_URI = 'https://developers.google.com/oauthplayground';
-const REFRESH_TOKEN = '1//04PN7FcUHRDqZCgYIARAAGAQSNwF-L9IrKEm2bbiMZ8pbQD8tYpI5zl2Uv-AHyuIxLBZNBrEZfmjA3QpItnDd9nk1vFbPPpA7QFs';
-
+/*
 const oauth2Client = new google.auth.OAuth(
     CLIENT_ID,
     CLIENT_SECRET,
@@ -104,7 +101,7 @@ function handleSignoutClick() {
         gapi.client.setToken('');
         document.getElementById('content').innerText = '';
         document.getElementById('authorize_button').innerText = 'Authorize';
-        document.getElementById('signout_button').style.backfaceVisibility = 'hidden';
+        document.getElementById('signout_button').style.backfaceVisibility = 'visible';
     }
 }
 /**
@@ -149,7 +146,8 @@ module.exports = createFolder;
             'pageSize': 10,
             'fields': 'files(id, name)',
         });
-    } catch (err) {
+    } 
+    catch (err) {
         document.getElementById('content').innerText = err.message;
         return;
     }
@@ -163,8 +161,11 @@ module.exports = createFolder;
         (str, file) => `${str}${file.name} (${file.id})\n`,
         'Files:\n');
     document.getElementById('content').innerText = output;
-}
-
+    }
+    /** 
+    * @param { string } realFileId file ID
+    * @return { obj } file status
+        **/
 async function downloadFile(realFileId) {
     // Get credentials and build service
     // TODO (developer) - Use appropriate auth mechanism for your app
